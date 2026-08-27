@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KARLITOSDENTI - EPK</title>
+    <style>
+        :root {
+            --bg-color: #0b0c10;
+            --secondary-bg: #1f2833;
+            --accent-color: #66fcf1;
+            --text-color: #c5c6c7;
+            --bright-text: #ffffff;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(135deg, #1f2833 0%, #0b0c10 100%);
+            border-bottom: 2px solid var(--accent-color);
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            color: var(--bright-text);
+            letter-spacing: 4px;
+        }
+        header p {
+            margin: 10px 0 0 0;
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            font-style: italic;
+        }
+        .hero-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        .profile-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 2px solid var(--secondary-bg);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            max-height: 500px;
+            object-fit: cover;
+        }
+        .bio-intro {
+            font-size: 1.15rem;
+            text-align: center;
+            margin-top: 20px;
+            color: var(--bright-text);
+            max-width: 750px;
+        }
+        .section-title {
+            color: var(--accent-color);
+            border-bottom: 1px solid var(--secondary-bg);
+            padding-bottom: 10px;
+            margin-top: 40px;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .card {
+            background-color: var(--secondary-bg);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+        }
+        .card h3 {
+            margin-top: 0;
+            color: var(--bright-text);
+        }
+        .track-list {
+            margin-top: 20px;
+        }
+        .track-item {
+            background-color: var(--secondary-bg);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(102, 252, 241, 0.1);
+        }
+        .track-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 8px;
+            margin-bottom: 10px;
+        }
+        .track-title {
+            color: var(--bright-text);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        .listen-btn {
+            background-color: #1DB954;
+            color: white;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .listen-btn:hover {
+            background-color: #1ed760;
+        }
+        .glance-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: var(--secondary-bg);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .glance-table td {
+            padding: 12px 20px;
+            border-bottom: 1px solid rgba(0,0,0,0.2);
+        }
+        .glance-table td:first-child {
+            font-weight: bold;
+            color: var(--accent-color);
+            width: 30%;
+        }
+        .glance-table tr:last-child td {
+            border-bottom: none;
+        }
+        .center-box {
+            background: linear-gradient(180deg, var(--secondary-bg) 0%, rgba(31,40,51,0.4) 100%);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 20px;
+            border: 1px dashed var(--accent-color);
+        }
+        .listen-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .link-item {
+            color: var(--bright-text);
+            text-decoration: none;
+            background-color: var(--secondary-bg);
+            padding: 10px 20px;
+            border-radius: 4px;
+            border: 1px solid var(--text-color);
+            transition: all 0.3s;
+        }
+        .link-item:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 60px;
+            border-top: 1px solid var(--secondary-bg);
+        }
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>KARLITOSDENTI</h1>
+            <p>Alternative Electronic &middot; Experimental &middot; Indie &middot; Left-Field Pop</p>
+        </header>
+
+        <section class="hero-section">
+            <!-- Sostituita l'immagine del microfono con l'immagine live in formato segnaposto base64 o caricabile localmente -->
+            <img src="1000120452_83cf36479223e270898cce923677b7e4-03_07_2026, 15_39_31.jpg" alt="KarlitosDenti Live" class="profile-img">
+            <div class="bio-intro">
+                KarlitosDenti (Carlo Denti) is a 16-year-old Italian artist, songwriter, producer and multi-instrumentalist from Sicily. 
+                His music moves between alternative electronic, experimental pop, indie, rock, jazz and hip-hop, blending contrasting influences into a sound with a distinct identity.
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">The Project & Biography</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>The Artist</h3>
+                    <p>KarlitosDenti began studying music and playing piano at the age of three. He has developed a strong musical ear, including absolute pitch, and is currently studying at a music-focused high school in Sicily.</p>
+                    <p>He writes and produces his own material and collaborates with emerging artists from the USA, Canada, Mexico, England and South Africa.</p>
+                </div>
+                <div class="card">
+                    <h3>The Project</h3>
+                    <p><strong>ACT I, ACT II and ACT III</strong> are three albums forming a single narrative cycle — a conceptual trilogy combining experimental music with an evolving fictional story.</p>
+                    <p>The story follows Dave, Brian and Cadett, three agents working for a government intelligence agency running into a psychological aftermath through separation and reunion.</p>
+                </div>
+            </div>
+            
+            <div class="center-box">
+                <h3>Recommended Listening Order</h3>
+                <p style="font-size: 1.25rem; font-weight: bold; color: var(--bright-text); letter-spacing: 2px;">ACT III &rarr; ACT I &rarr; ACT II</p>
+                <p style="margin: 0; font-size: 0.9rem;">The three albums are designed to be listened to in this order, gradually revealing how the story connects.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Selected Tracks</h2>
+            <div class="track-list">
+                
+                <div class="track-item">
+                    <div class="track-header">
+                        <span class="track-title">01 — PLACERVILLE (feat. SeeQue)</span>
+                        <a href="https://open.spotify.com/intl-it/track/5AExxImneXfxImZB39SHVS?si=dffb40bec7f64488" target="_blank" class="listen-btn">Listen on Spotify</a>
+                    </div>
+                    <p style="margin: 0; font-size: 0.95rem;">A strong introduction to KarlitosDenti's alternative sound, combining distorted drums, acid basslines and bright synths. (From ACT II)</p>
+                </div>
+
+                <div class="track-item">
+                    <div class="track-header">
+                        <span class="track-title">02 — FOREST (feat. Aetheri)</span>
+                        <a href="https://open.spotify.com/intl-it/track/4OquP2i1r5XmhqLjUNkf2H?si=cf9d67be4768416b" target="_blank" class="listen-btn">Listen on Spotify</a>
+                    </div>
+                    <p style="margin: 0; font-size: 0.95rem;">A dark, energetic journey through experimental production, analog synth textures and atmospheric electronic soundscapes. (From ACT II)</p>
+                </div>
+
+                <div class="track-item">
+                    <div class="track-header">
+                        <span class="track-title">03 — HALF ASLEEP</span>
+                        <a href="https://open.spotify.com/intl-it/track/1f0pCBrj0vqN7UalhqWNj0?si=700e06d2822a4a4e" target="_blank" class="listen-btn">Listen on Spotify</a>
+                    </div>
+                    <p style="margin: 0; font-size: 0.95rem;">One of KarlitosDenti's most introspective and personal tracks, exploring insomnia and paranoia through an indie-rap production. (From ACT I)</p>
+                </div>
+
+                <div class="track-item">
+                    <div class="track-header">
+                        <span class="track-title">04 — I DON'T WANNA SAVE YA!</span>
+                        <a href="https://open.spotify.com/intl-it/track/49hYBSbJSTS5eomv6MrWFA?si=4cafc333afc443d2" target="_blank" class="listen-btn">Listen on Spotify</a>
+                    </div>
+                    <p style="margin: 0; font-size: 0.95rem;">An energetic track about breaking free, taking flight and the desire to build something of your own. (From ACT III)</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Live Performances</h2>
+            <p>KarlitosDenti has performed his music live in Italy, including performances connected with Sanremo Rock & Trend, independent live events and public performances. In August 2026, he performed during the Targa d'Argento “Castagno dei Cento Cavalli” event in Sant'Alfio, Sicily.</p>
+        </section>
+
+        <section>
+            <h2 class="section-title">At a Glance</h2>
+            <table class="glance-table">
+                <tr>
+                    <td>Artist</td>
+                    <td>KarlitosDenti / Carlo Denti (Age 16)</td>
+                </tr>
+                <tr>
+                    <td>Based in</td>
+                    <td>Sicily, Italy</td>
+                </tr>
+                <tr>
+                    <td>Language</td>
+                    <td>English (Lyrics & performance)</td>
+                </tr>
+                <tr>
+                    <td>Roles</td>
+                    <td>Artist &middot; Songwriter &middot; Producer &middot; Multi-instrumentalist</td>
+                </tr>
+                <tr>
+                    <td>Background</td>
+                    <td>Piano studies since age 3 &middot; Absolute pitch &middot; Music High School</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2 class="section-title">Listen & Watch</h2>
+            <div class="listen-links">
+                <a href="https://open.spotify.com/intl-it/artist/2lGgcJEeuxkgBzlGnTP5m2?si=62a4LU26RcygsvcJMZWT4g" target="_blank" class="link-item">Spotify</a>
+                <a href="https://www.youtube.com/@kcdmusic4" target="_blank" class="link-item">YouTube</a>
+                <a href="https://music.apple.com/it/artist/karlitosdenti/1806636407" target="_blank" class="link-item">Apple Music</a>
+                <a href="https://www.instagram.com/karlitosdenti" target="_blank" class="link-item">Instagram</a>
+            </div>
+        </section>
+
+        <footer>
+            <p>For label, collaboration and booking enquiries:</p>
+            <p style="font-size: 1.2rem; font-weight: bold;"><a href="mailto:carlodentibusiness@gmail.com">carlodentibusiness@gmail.com</a></p>
+            <p style="font-size: 0.8rem; margin-top: 30px; color: rgba(255,255,255,0.3);">&copy; 2026 KARLITOSDENTI. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
